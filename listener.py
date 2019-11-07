@@ -6,6 +6,7 @@ def main():
     try:
         account = CloudStorageAccount(config.STORAGE_ACCOUNT_NAME,config.STORAGE_ACCOUNT_KEY)
         queue_service = account.create_queue_service()
+        queue_service.create_queue(config.STORAGE_QUEUE_NAME)
         while True:
             try:
                 messages = queue_service.get_messages(config.STORAGE_QUEUE_NAME)
