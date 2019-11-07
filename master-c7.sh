@@ -10,7 +10,7 @@ echo STORAGE_ACCOUNT_KEY = \'$3\' >> config.py
 /bin/wget https://github.com/circadence/scripts/raw/master/listener.py
 
 sudo yum install -y python3
-/usr/bin/virtualenv -p python3 venv
+/usr/local/bin/virtualenv -p python3 venv
 . venv/bin/activate
 venv/bin/python -m pip install -r requirements.txt
 venv/bin/python listener.py
