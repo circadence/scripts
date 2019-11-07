@@ -6,6 +6,9 @@ echo STORAGE_QUEUE_NAME = \'$1\' > config.py
 echo STORAGE_ACCOUNT_NAME = \'$2\' >> config.py
 echo STORAGE_ACCOUNT_KEY = \'$3\' >> config.py
 
+/bin/wget https://github.com/circadence/scripts/raw/master/requirements.txt
+/bin/wget https://github.com/circadence/scripts/raw/master/listener.py
+
 sudo yum install -y python3
 /usr/bin/virtualenv -p python3 venv
 . venv/bin/activate
